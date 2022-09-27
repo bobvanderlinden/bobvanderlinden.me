@@ -1,0 +1,13 @@
+# The URL the site will be built for
+base_url = "https://bobvanderlinden.me"
+compile_sass = true
+build_search_index = true
+theme = "anpu"
+generate_feed = true
+taxonomies = [
+  {name = "tags"}
+]
+
+[markdown]
+highlight_code = true
+
