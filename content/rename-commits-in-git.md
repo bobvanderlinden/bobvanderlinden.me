@@ -174,10 +174,10 @@ I found multi-cursor features in vscode particularly useful for this. Using `Ctr
 
 Once finished, save and exit the editor and rebase will:
 
-* Reset to the base of your pull request
-* (Cherry-)pick the `deadbee` commit
-* Amend the commit with the new message: "fix: The oneline of this commit"
-* (Cherry-)pick the `fa1afe1` commit
-* Amend the commit with the new message: "feat: The oneline of the next commit"
+- Reset to the base of your pull request
+- (Cherry-)pick the `deadbee` commit
+- Amend the commit with the new message: "fix: The oneline of this commit"
+- (Cherry-)pick the `fa1afe1` commit
+- Amend the commit with the new message: "feat: The oneline of the next commit"
 
 This leaves you with your pull request commits having been renamed in one go.
