@@ -1,4 +1,4 @@
-# The URL the site will be built for
+title = "bobvanderlinden.me"
 base_url = "https://bobvanderlinden.me"
 compile_sass = true
 build_search_index = true
