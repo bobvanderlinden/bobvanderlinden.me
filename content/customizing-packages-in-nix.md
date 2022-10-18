@@ -144,7 +144,7 @@ Or even in Nix CLI:
 nix profile install git-with-gui
 ```
 
-Note that even though we have changed the attribute in the above example, the _name_ of the package didn't change. The name is part of the derivation. When using `.override` this part of the derivation would not change. The name can only be changed using `.overrideAttrs`.
+Note that even though we have a new attribute name in the above example, the _name of the package_ didn't change. The name is part of the derivation. The package is called `git`, so the Nix store path is still `/nix/store/*-git`. When using `.override` this part of the derivation would not change. The name can only be changed using `.overrideAttrs`.
 
 ## Modification methods
 
