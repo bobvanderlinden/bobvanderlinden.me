@@ -221,7 +221,7 @@ The `name = "i3-next"` is also set. This is to make sure the new package name do
 }
 ```
 
-This creates a new package called `myfortune` that uses the build steps from `fortune` to build source code from a local directory `./fortune-src` into a package. It makes the package available through `environment.systemPackages`, so that it is available in the terminal.
+This creates a new attribute `myfortune` that uses the build steps from `fortune` to build source code from a local directory `./fortune-src` into a package. It makes the package available through `environment.systemPackages`, so that it is available in the terminal.
 
 ### Use a different dependency for a single package
 
@@ -237,7 +237,7 @@ This creates a new package called `myfortune` that uses the build steps from `fo
 }
 ```
 
-This creates a new package `maven-jdk8` that builds and runs maven explicitly under `jdk8`. Notice that `final.jdk8` is used, so that other overlays may potentially overwrite `jdk8`. Also note that `final.maven` is _not_ used, because that would refer to this package, causing an infinite loop during Nix evaluation.
+This creates a new attribute `maven-jdk8` that builds and runs maven explicitly under `jdk8`. Notice that `final.jdk8` is used, so that other overlays may potentially overwrite `jdk8`. Also note that `final.maven` is _not_ used, because that would refer to this package, causing an infinite loop during Nix evaluation.
 
 ### Apply a security patch system-wide
 
