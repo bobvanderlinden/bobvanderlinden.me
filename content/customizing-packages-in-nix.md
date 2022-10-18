@@ -94,6 +94,8 @@ With overlays you can replace an existing package system-wide. That means overwr
 
 This can be useful when you want to for instance patch a library that is used by other software. It does however require all depending packages to be rebuild. Nix does these rebuilds seamlessly and automatically, but it does cost time.
 
+Also a word of warning: overlays can become confusing. You generally want to be aware of overwritten packages in overlays. It is not obvious when referring to a package `pkgs.git` that it is different from what is in Nixpkgs. Especially when overwriting packages like `openssl`, which `git` and many other packages depends on. With great power comes great responsibility!
+
 On NixOS you can use [the `nixpkgs.overlays` option](https://search.nixos.org/options?channel=22.05&show=nixpkgs.overlays&query=overlays):
 
 ```nix
