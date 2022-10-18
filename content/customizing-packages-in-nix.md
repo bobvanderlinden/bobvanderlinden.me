@@ -146,7 +146,7 @@ Note that even though we have changed the attribute in the above example, the _n
 
 ## Modification methods
 
-Now that we know where we can use modified packages, we will dive into the two ways to modify a package: `override` and `overrideAttrs`.
+Now that we know where we can use modified packages, we will dive into two ways to modify a package: `override` and `overrideAttrs`.
 
 ### `<pkg>.override`
 
@@ -173,7 +173,7 @@ For instance, adding a patch to `curl` can be done like:
 
 ```nix
 (curl.overrideAttrs (previousAttrs: {
-  patches = previousAttrs.patches ++ [./my-patch.patch ];
+  patches = previousAttrs.patches ++ [ ./my-patch.patch ];
 }))
 ```
 
