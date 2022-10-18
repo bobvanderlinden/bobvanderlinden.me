@@ -116,7 +116,7 @@ Note that the overlay is defined as a function with the arguments `final` and `p
 
 More information about overlays can be found in [the Nixpkgs manual](https://nixos.org/manual/nixpkgs/stable/#chap-overlays).
 
-It is also possible to introduce a new name for custom packages, so that you can refer to this name in other parts of your configuration. For instance:
+It is also possible to introduce a new attribute for custom packages, so that you can refer to this attribute in other parts of your configuration. For instance:
 
 ```nix
 {
@@ -141,6 +141,8 @@ Or even in Nix CLI:
 ```sh
 nix profile install git-with-gui
 ```
+
+Note that even though we have changed the attribute in the above example, the _name_ of the package didn't change. The name is part of the derivation. When using `.override` this part of the derivation would not change. The name can only be changed using `.overrideAttrs`.
 
 ## Modification methods
 
