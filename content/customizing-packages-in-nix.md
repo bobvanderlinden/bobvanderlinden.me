@@ -112,7 +112,7 @@ When creating such an overlay, it is not needed anymore to specify the override 
 
 Note that the overlay is defined as a function with the arguments `final` and `prev`.
 
-`prev` refers to the previous layer, the underlying one. In this case that is `nixpkgs`. We take the original package from `nixpkgs` using `super.pipewire` and alter that package. With `pipewire = ...;` we overwrite the orignal pipewire package in succeeding layers, which eventually results in the change in `pkgs`.
+`prev` refers to the previous layer, the underlying one. In this case that is `nixpkgs`. We take the original package from `nixpkgs` using `prev.pipewire` and alter that package. With `pipewire = ...;` we overwrite the orignal pipewire package in succeeding layers, which eventually results in the change in `pkgs`.
 
 `final` refers to the top-level overlay, which includes our overwritten packages. If we want to refer to a another package that we have overridden, then we can refer to `final`.
 
