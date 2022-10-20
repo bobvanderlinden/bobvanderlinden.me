@@ -246,7 +246,7 @@ This creates a new attribute `maven-jdk8` that builds and runs maven explicitly 
   nixpkgs.overlays = [
     (final: prev: {
       openssl = prev.openssl.overrideAttrs (previousAttrs: {
-        patches = previousAttrs ++ [
+        patches = previousAttrs.patches ++ [
           (fetchpatch {
             name = "CVE-2021-4044.patch";
             url = "https://git.openssl.org/gitweb/?p=openssl.git;a=patch;h=758754966791c537ea95241438454aa86f91f256";
